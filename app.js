@@ -510,7 +510,7 @@
 
   function fmtTime(ts) {
     if (!ts) return '—';
-    const t = ts.split(' ')[1] || ts;
+    const t = ts.replace('T', ' ').split(' ')[1] || ts;
     return t.slice(0, 5);
   }
 
