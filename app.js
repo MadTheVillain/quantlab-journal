@@ -436,7 +436,7 @@
   }
 
   function initTheme() {
-    let theme = 'dark';
+    let theme = 'light';
     try {
       const stored = localStorage.getItem('rxt-theme');
       if (stored === 'light' || stored === 'dark') theme = stored;
