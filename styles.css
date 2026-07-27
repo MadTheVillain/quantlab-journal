@@ -562,3 +562,30 @@ html[data-theme='light'] .recap-dialog { background: #fff; color: #0f172a; }
 html[data-theme='light'] .recap-chart, html[data-theme='light'] .recap-notes { background: #f9fafb; }
 .recap-notes-title { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); margin-bottom: 6px; }
 .recap-notes-body { font-size: .9rem; line-height: 1.5; }
+
+/* ===== phone: compact PnL calendar so day P&L fits inside cells ===== */
+@media (max-width: 560px) {
+  .calendar-weekdays,
+  .calendar-days {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .calendar-week-cell { display: none; }        /* weekly totals hidden on phone (KPI row covers totals) */
+  .calendar-weekdays {
+    font-size: 0.52rem;
+    letter-spacing: 0.02em;
+  }
+  .calendar-day {
+    height: 50px;
+    padding: 4px 2px;
+    border-radius: 8px;
+    align-items: center;
+  }
+  .calendar-day-date { font-size: 0.6rem; }
+  .calendar-day-pnl {
+    font-size: 0.56rem;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+  }
+}
